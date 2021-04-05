@@ -128,6 +128,7 @@ namespace CSharpLanguageFeatures
             }
             */
 
+            /*
             var i = 0;
             while(i <= 10)
             {
@@ -139,9 +140,29 @@ namespace CSharpLanguageFeatures
                     Console.WriteLine($"{i} is an odd number");
                 }
                 i++;
+            }*/
+
+            //do while construct
+            /*
+            var i = 0;
+            do
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine($"{i} is an even number");
+                }
+                else
+                {
+                    Console.WriteLine($"{i} is an odd number");
+                }
+                i++;
             }
-            
+            while (i <= 10);
+            */
+
         }
+
+
 
         public static void SwitchDemo()
         {

@@ -1,0 +1,15 @@
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/bin/Debug/net5.0/CSharpLanguageFeatures.deps.json
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/bin/Debug/net5.0/CSharpLanguageFeatures.runtimeconfig.json
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/bin/Debug/net5.0/CSharpLanguageFeatures.runtimeconfig.dev.json
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/bin/Debug/net5.0/CSharpLanguageFeatures.dll
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/bin/Debug/net5.0/ref/CSharpLanguageFeatures.dll
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/bin/Debug/net5.0/CSharpLanguageFeatures.pdb
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.csprojAssemblyReference.cache
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.AssemblyInfoInputs.cache
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.AssemblyInfo.cs
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.csproj.CoreCompileInputs.cache
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.dll
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/ref/CSharpLanguageFeatures.dll
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.pdb
+/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CSharpLanguageFeatures/obj/Debug/net5.0/CSharpLanguageFeatures.genruntimeconfig.cache

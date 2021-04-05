@@ -1,0 +1,62 @@
+C#
+    Java like
+        Object Oriented
+        Garbage Collector
+        Pointer free
+
+    Functional Language
+        Functions are first class citizens
+            Functions can be treated like objects
+                Can be assigned to variables
+                Higher Order Functions
+                    Functions as arguments
+                    Can be returned as returned values
+
+        LINQ (Language Integrated Query)
+
+
+Type System
+Programming Constructs
+    Declare variables
+    Conditional Statements
+    Looping Constructs
+    Classes
+    Abstractions
+
+Unique features
+    Looping constructs are obsolete
+    Decision constructs are obsolete
+    Mutations are obsolete
+
+Type System
+    Value Type
+        sbyte, byte, short, ushort, int, uint, long, ulong, bool, struct, decimal, double
+        enum, struct
+
+    Reference Type
+        Classes
+            encapsulation of state & behavior
+    
+Custom Types
+    struct
+    class
+    record
+    interfaces
+    enum
+
+Application organization
+    Namespaces (logical)
+    Assembly (physical) (.dll, .exe)
+
+Implicitly Typed Local Variables
+    Type Inference (compiler feature)
+
+    Intermediate Language (IL)
+
+Control Statements
+    Conditional Branching Statements
+        if else, switch case
+    Iteration Statements
+        for, while, do while, foreach
+        
+    Jump Statements

@@ -60,3 +60,4 @@ Control Statements
         for, while, do while, foreach
         
     Jump Statements
+        break, continue, return, yield, goto

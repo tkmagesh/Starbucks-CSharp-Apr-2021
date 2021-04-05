@@ -160,9 +160,43 @@ namespace CSharpLanguageFeatures
             while (i <= 10);
             */
 
+
+            //break
+            /*
+            for(var i=0; i<= 10; i++)
+            {
+                Console.WriteLine(i);
+                if (i == 5)
+                    break;
+            }
+            */
+            //continue
+            Console.WriteLine("Using 'continue'");
+            for(var i=0; i<= 10; i++)
+            {
+                if (i % 2 != 0)
+                    continue;
+                Console.WriteLine(i);
+            }
+
+            var fib10 = Fibonacci(10);
+            Console.WriteLine($"10th Fibonacci no : {fib10}");
+            
         }
 
-
+        //Function returns nth Fibonacci number
+        public static int Fibonacci(int n)
+        {
+            if (n > 1)
+            {
+                return Fibonacci(n - 1) + Fibonacci(n - 2);
+            }
+            else
+            {
+                return n;
+            }
+             
+        }
 
         public static void SwitchDemo()
         {

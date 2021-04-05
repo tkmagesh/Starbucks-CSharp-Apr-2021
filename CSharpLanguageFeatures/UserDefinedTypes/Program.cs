@@ -5,9 +5,9 @@ namespace UserDefinedTypes
     class Employee
     {
         //fields
-        private int Id;
+        //private int Id;
         //private string _FirstName;
-        public readonly string LastName;
+        public string LastName;
 
         /*
         public string GetFirstName()
@@ -37,7 +37,9 @@ namespace UserDefinedTypes
         }*/
 
         public string FirstName { get; set; }
-        
+        public int Id { get; private set;  }
+
+        public string FullName => $"{FirstName} {LastName}";
 
         //constructor method
         public Employee(int Id)
@@ -88,6 +90,29 @@ namespace UserDefinedTypes
         }
     }
     */
+
+    public struct Operands
+    {
+        public int N1 { get; set; }
+        public int N2 { get; set; }
+    }
+
+    class Calculator
+    {
+        public Operands Operands { get; set; }
+        public int Result { get; private set; }
+
+        //Using the "expression body" syntax
+
+        public void Add() => Result = Operands.N1 + Operands.N2;
+
+        public void Subtract() => Result = Operands.N1 - Operands.N2;
+        
+        public void Multiply() => Result = Operands.N1 * Operands.N2;
+
+        public void Divide() => Result = Operands.N1 / Operands.N2;
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -109,6 +134,7 @@ namespace UserDefinedTypes
             //emp.SetFirstName("John");
             emp2.FirstName = "John";
             Console.WriteLine(emp2.FirstName);
+            Console.WriteLine(emp2.FullName);
             //emp2.Print();
             //var user = new User();
 
@@ -119,6 +145,10 @@ namespace UserDefinedTypes
             var user2 = User.GetUser();
             user2.Print();
             */
+
+            var calc = new Calculator { Operands = new Operands { N1 = 100, N2 = 200 } };
+            calc.Add();
+            Console.WriteLine(calc.Result);
         }
     }
 }

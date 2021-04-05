@@ -6,10 +6,38 @@ namespace UserDefinedTypes
     {
         //fields
         private int Id;
-        public string FirstName;
-        public string LastName;
+        //private string _FirstName;
+        public readonly string LastName;
 
-        public static string Dummy = "A dummy string";
+        /*
+        public string GetFirstName()
+        {
+            return FirstName;
+        }
+        public void SetFirstName(string value)
+        {
+            //do some validations
+            FirstName = value;
+        }
+        */
+
+        /*
+        public string FirstName
+        {
+            get
+            {
+                //Console.WriteLine("firstname getter triggered");
+                return _FirstName;
+            }
+            set
+            {
+                //Console.WriteLine($"firstname setter triggered with value : {value}");
+                _FirstName = value;
+            }
+        }*/
+
+        public string FirstName { get; set; }
+        
 
         //constructor method
         public Employee(int Id)
@@ -30,6 +58,7 @@ namespace UserDefinedTypes
         }
     }
 
+    /*
     class User
     {
         public string UserName;
@@ -58,7 +87,7 @@ namespace UserDefinedTypes
             return instance;
         }
     }
-
+    */
     class Program
     {
         static void Main(string[] args)
@@ -71,18 +100,25 @@ namespace UserDefinedTypes
             */
 
             //using the object initializer syntax
-            var emp = new Employee(100) { FirstName = "Magesh", LastName = "Kuppan" };
-            emp.Print();
+            var emp = new Employee(100) { LastName = "Kuppan" };
+            emp.FirstName = "Magesh";
+            Console.WriteLine(emp.FirstName);
+            //emp.Print();
 
-            var emp2 = new Employee(200) { FirstName = "John", LastName = "Kennedy" };
-            emp2.Print();
+            var emp2 = new Employee(200) { LastName = "Kennedy" };
+            //emp.SetFirstName("John");
+            emp2.FirstName = "John";
+            Console.WriteLine(emp2.FirstName);
+            //emp2.Print();
             //var user = new User();
 
+            /*
             var user = User.GetUser();
             user.Print();
 
             var user2 = User.GetUser();
             user2.Print();
+            */
         }
     }
 }

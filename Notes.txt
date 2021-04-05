@@ -73,7 +73,7 @@ Classes
         Encapsulates state & behavior & events
         State
             Field
-            Property
+            Property (A field with get & set)
         Behavior
             Method
 
@@ -98,3 +98,9 @@ FN, LN,
 Id, FN, LN
 
 Singleton
+Dependency Injection Frameworks in C#
+Unity
+Autofac
+Castle Windsor
+NInject
+Managed Extensibility Framework (MEF)

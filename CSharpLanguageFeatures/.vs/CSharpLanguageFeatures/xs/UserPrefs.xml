@@ -1,13 +1,14 @@
-﻿<Properties StartupConfiguration="{6DA7E14E-ED91-4C5A-A79C-E19F787DFA13}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpLanguageFeatures/Program.cs">
+﻿<Properties StartupConfiguration="{2AC3F650-39B5-407B-894B-681B9711C414}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserDefinedTypes/Program.cs">
     <Files>
-      <File FileName="CSharpLanguageFeatures/Program.cs" Line="9" Column="13" />
+      <File FileName="UserDefinedTypes/Program.cs" Line="28" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSharpLanguageFeatures" expanded="True">
-            <Node name="CSharpLanguageFeatures" expanded="True">
+            <Node name="CSharpLanguageFeatures" expanded="True" />
+            <Node name="UserDefinedTypes" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -15,8 +16,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.UserDefinedTypes PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CSharpLanguageFeatures FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.CSharpLanguageFeatures PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

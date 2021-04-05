@@ -195,7 +195,6 @@ namespace CSharpLanguageFeatures
             {
                 return n;
             }
-             
         }
 
         public static void SwitchDemo()

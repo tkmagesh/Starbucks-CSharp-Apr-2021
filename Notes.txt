@@ -61,3 +61,40 @@ Control Statements
         
     Jump Statements
         break, continue, return, yield, goto
+
+User Defined Types
+    Classes
+    Structures
+    Enumerations
+
+
+Classes
+    Blueprint for an object
+        Encapsulates state & behavior & events
+        State
+            Field
+            Property
+        Behavior
+            Method
+
+    Access Modifiers
+        public, private, protected, internal
+
+    Class Members
+        Instance Members
+            accessible ONLY using the instance of the class (object)
+
+        Static Members
+            accessible using the 'Class' reference
+
+Id, FN, LN
+
+Id,
+FN,
+LN,
+Id, FN,
+Id, LN,
+FN, LN,
+Id, FN, LN
+
+Singleton

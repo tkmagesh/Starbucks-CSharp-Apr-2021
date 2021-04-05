@@ -110,8 +110,36 @@ namespace CSharpLanguageFeatures
 
             //control statements
             //switch
-            SwitchDemo();
+            //SwitchDemo();
 
+            //indefinite loops
+            /*for(; ; )
+            {
+                break;
+            }*/
+
+            //while loop
+            /*
+            
+            initializer;
+            while(condition){
+                statement1;
+                statement2;
+            }
+            */
+
+            var i = 0;
+            while(i <= 10)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine($"{i} is an even number");
+                } else
+                {
+                    Console.WriteLine($"{i} is an odd number");
+                }
+                i++;
+            }
             
         }
 

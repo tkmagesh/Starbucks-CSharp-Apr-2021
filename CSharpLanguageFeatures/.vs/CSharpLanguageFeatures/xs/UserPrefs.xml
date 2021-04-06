@@ -2,10 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.OOPDemo PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="OOPDemo/Shapes.cs">
     <Files>
-      <File FileName="UserDefinedTypes/Program.cs" Line="109" Column="47" />
-      <File FileName="OOPDemo/Program.cs" Line="22" Column="6" />
-      <File FileName="CSharpLanguageFeatures/Program.cs" Line="45" Column="27" />
-      <File FileName="OOPDemo/Shapes.cs" Line="7" Column="10" />
+      <File FileName="OOPDemo/Program.cs" Line="188" Column="17" />
+      <File FileName="OOPDemo/Shapes.cs" Line="46" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

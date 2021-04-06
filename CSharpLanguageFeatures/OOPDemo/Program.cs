@@ -163,8 +163,8 @@ namespace OOPDemo
             Console.WriteLine(order);
             */
 
-           
-            
+
+            /*
             IDimension[] shapesWithDimension = new IDimension[]
             {
                 new Circle { Radius = 5},
@@ -174,7 +174,36 @@ namespace OOPDemo
             foreach (var shapeWithDimension in shapesWithDimension)
             {
                 Console.WriteLine($"Area = {shapeWithDimension.Area()}, Perimeter = {shapeWithDimension.Perimeter()}");
+            }*/
+
+            Shapes shapes = new Shapes();
+            shapes.AddShape(new Circle { Radius = 5 });
+            shapes.AddShape(new Rectangle { Height = 10, Width = 20 });
+            shapes.AddShape(new Circle { Radius = 10 });
+            shapes.AddShape(new Rectangle { Height = 15, Width = 10 });
+
+            /*
+            for(var index = 0; index < shapes.Count; index++)
+            {
+                var shape = shapes[index];
+                shape.Draw();
+            }*/
+
+            /*
+            var enumerator = (IEnumerator)shapes;
+            while (enumerator.MoveNext())
+            {
+                var shape = (Shape)enumerator.Current;
+                shape.Draw();
             }
+            */
+
+            
+            foreach(var shape in shapes)
+            {
+                ((Shape)shape).Draw();
+            }
+            
 
         }
     }

@@ -1,16 +1,19 @@
-﻿<Properties StartupConfiguration="{2AC3F650-39B5-407B-894B-681B9711C414}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserDefinedTypes/Program.cs">
+﻿<Properties StartupConfiguration="{44C9BA68-0CB1-40E3-B4D7-DE9CC78BF97B}|Default">
+  <MonoDevelop.Ide.ItemProperties.OOPDemo FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OOPDemo/Program.cs">
     <Files>
-      <File FileName="UserDefinedTypes/Program.cs" Line="28" Column="10" />
+      <File FileName="UserDefinedTypes/Program.cs" Line="109" Column="47" />
+      <File FileName="OOPDemo/Program.cs" Line="12" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSharpLanguageFeatures" expanded="True">
             <Node name="CSharpLanguageFeatures" expanded="True" />
-            <Node name="UserDefinedTypes" expanded="True">
+            <Node name="OOPDemo" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
+            <Node name="UserDefinedTypes" expanded="True" />
           </Node>
         </State>
       </Pad>

@@ -104,3 +104,10 @@ Autofac
 Castle Windsor
 NInject
 Managed Extensibility Framework (MEF)
+
+Create a Calculator Class 
+    N1, N2, Result
+    Add()
+    Subtract()
+    Multiply()
+    Divide()

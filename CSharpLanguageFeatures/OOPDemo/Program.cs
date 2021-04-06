@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace OOPDemo
 {
@@ -111,6 +112,16 @@ namespace OOPDemo
 
             var order = new Order();
             Console.WriteLine($"Order Value = {order.CalculateTotal()}");
+
+            /*
+            ArrayList list = new ArrayList();
+            list.Add(100);
+            list.Add(new StaionaryProduct());
+            list.Add(300);
+            foreach(var item in list)
+            {
+                Console.WriteLine(item);
+            }*/
         }
     }
 }

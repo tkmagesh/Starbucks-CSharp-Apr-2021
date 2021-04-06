@@ -7,6 +7,7 @@ namespace OOPDemo
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal UnitCost { get; set; }
+        public decimal Discount { get; set; }
     }
 
     class ProductItem

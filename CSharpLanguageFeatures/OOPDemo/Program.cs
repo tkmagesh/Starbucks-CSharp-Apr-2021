@@ -97,6 +97,11 @@ namespace OOPDemo
         {
             return ProductItems.ItemsTotal() * ((100 - Discount) / 100);
         }
+
+        public override string ToString()
+        {
+            return $"{ProductItems}\n Order Value : {CalculateTotal()}";
+        }
     }
 
 
@@ -137,6 +142,7 @@ namespace OOPDemo
                 Console.WriteLine(item);
             }*/
 
+            /*
             var pen = new StaionaryProduct { Id = 100, Name = "Pen", UnitCost = 10, Discount = 0 };
             var pencil = new StaionaryProduct { Id = 101, Name = "Pencil", UnitCost = 5, Discount = 5 };
             var marker = new StaionaryProduct { Id = 102, Name = "Marker", UnitCost = 50, Discount = 10 };
@@ -150,9 +156,32 @@ namespace OOPDemo
             order.ProductItems.AddProductItem(new ProductItem { Product = grapes, Units = 10 });
             order.ProductItems.AddProductItem(new ProductItem { Product = onions, Units = 15 });
 
-            Console.WriteLine(order.ProductItems);
-            Console.WriteLine(order.CalculateTotal());
+            
+            //Console.WriteLine(order.ProductItems);
+            //Console.WriteLine(order.CalculateTotal());
+            
+            Console.WriteLine(order);
+            */
+
+           
+            
+            IDimension[] shapesWithDimension = new IDimension[]
+            {
+                new Circle { Radius = 5},
+                new Rectangle { Height = 10, Width = 20 },
+                new Circle { Radius = 15}
+            };
+            foreach (var shapeWithDimension in shapesWithDimension)
+            {
+                Console.WriteLine($"Area = {shapeWithDimension.Area()}, Perimeter = {shapeWithDimension.Perimeter()}");
+            }
 
         }
     }
 }
+
+/*
+ Actual Cost : Products cost without discount
+ Savings : discount value
+ To Pay : order value
+*/

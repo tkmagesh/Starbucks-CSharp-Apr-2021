@@ -42,10 +42,9 @@ namespace OOPDemo
         }
     }
 
-
-    class Order
+    class ProductItems
     {
-        public ProductItem[] ProductItems = new ProductItem[] {
+        public ProductItem[] Items = new ProductItem[] {
             new ProductItem
             {
                 Product = new StaionaryProduct {Id = 100, Name = "Pen", UnitCost = 10, Discount = 5}
@@ -62,16 +61,26 @@ namespace OOPDemo
                 , Units = 10
             }
         };
+
+        public decimal ItemsTotal()
+        {
+            var total = 0m;
+            foreach (var productItem in Items)
+            {
+                total += productItem.ProductValue();
+            }
+            return total;
+        }
+    }
+
+    class Order
+    {
+        public ProductItems ProductItems = new ProductItems();
         public decimal Discount;
 
         public decimal CalculateTotal()
         {
-            var total = 0m;
-            foreach(var productItem in ProductItems)
-            {
-                total += productItem.ProductValue();
-            }
-            return total * ((100 - Discount) / 100);
+            return ProductItems.ItemsTotal() * ((100 - Discount) / 100);
         }
     }
 

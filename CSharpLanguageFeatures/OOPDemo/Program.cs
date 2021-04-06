@@ -7,16 +7,24 @@ namespace OOPDemo
         public string Name { get; set; }
         public decimal UnitCost { get; set; }
         public decimal Discount { get; set; }
-        public decimal FinalCost() => UnitCost * ((100 - Discount) / 100);
+        public abstract decimal FinalCost();
     }
 
     class StaionaryProduct : Product
     {
-         
+        public override decimal FinalCost()
+        {
+            return this.UnitCost * ((100 - this.Discount) / 100);
+        }
     }
 
     class PerishableProduct : Product {        
         public int ExpiryInDays {get; set;}
+        public override decimal FinalCost()
+        {
+            var finalDiscount = ExpiryInDays <= 2 ? Discount + 10 : Discount;
+            return this.UnitCost * ((100 - finalDiscount) / 100);
+        }
     }
 
     class ProductItem
@@ -86,8 +94,9 @@ namespace OOPDemo
 
             PerishableProduct grapes = new PerishableProduct { Id = 101, Name = "Grapes", UnitCost = 50, Discount = 25, ExpiryInDays = 2 };
 
-            Product p = new Product();
-            
+            Console.WriteLine(pen.FinalCost());
+
+            Console.WriteLine(grapes.FinalCost());
         }
     }
 }

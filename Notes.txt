@@ -126,3 +126,12 @@ Object Oriented Programming
             Group related types together
         Polymorphism
 
+Assignment
+    Create a Products collection
+        Add new products
+        Get the count of the products
+        Get a product by index
+        Get a product by Id
+        Remove a product
+        Iterate through the collecting using foreach
+

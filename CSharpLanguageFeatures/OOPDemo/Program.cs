@@ -9,6 +9,11 @@ namespace OOPDemo
         public decimal UnitCost { get; set; }
         public decimal Discount { get; set; }
         public virtual decimal FinalCost() => UnitCost * ((100-Discount)/100);
+
+        public override string ToString()
+        {
+            return $"Id = {Id}, Name = {Name}, UnitCost = {UnitCost} Discount = {Discount}";
+        }
     }
 
     class StaionaryProduct : Product
@@ -41,36 +46,45 @@ namespace OOPDemo
         {
             return Units * Product.FinalCost();
         }
+
+        public override string ToString()
+        {
+            return $"{Product}, Units = {Units} ProductValue = {ProductValue()}";
+        }
     }
 
     class ProductItems
     {
-        public ProductItem[] Items = new ProductItem[] {
-            new ProductItem
-            {
-                Product = new StaionaryProduct {Id = 100, Name = "Pen", UnitCost = 10, Discount = 5}
-                , Units = 10
-            },
-            new ProductItem
-            {
-                Product = new StaionaryProduct {Id = 101, Name = "Pencil", UnitCost = 5, Discount = 5}
-                , Units = 10
-            },
-            new ProductItem
-            {
-                Product = new PerishableProduct {Id = 102, Name = "Grapes", UnitCost = 20, Discount = 25, ExpiryInDays = 2}
-                , Units = 10
-            }
-        };
+        private ArrayList Items = new ArrayList();
 
         public decimal ItemsTotal()
         {
             var total = 0m;
             foreach (var productItem in Items)
             {
-                total += productItem.ProductValue();
+                total += ((ProductItem)productItem).ProductValue();
             }
             return total;
+        }
+
+        public void AddProductItem(ProductItem productItem)
+        {
+            Items.Add(productItem);
+        }
+
+        public ProductItem GetProductItemByIndex(int index)
+        {
+            return (ProductItem)Items[index];
+        }
+
+        public override string ToString()
+        {
+            var result = "";
+            foreach(var item in Items)
+            {
+                result += item.ToString() + "\n";
+            }
+            return result;
         }
     }
 
@@ -103,7 +117,7 @@ namespace OOPDemo
 
             //StaionaryProduct pen = new StaionaryProduct{ Id = 100, Name = "Pen", UnitCost = 10, Discount = 0 };
             //Console.WriteLine(pen.FinalCost());
-
+            /*
             PerishableProduct grapes = new PerishableProduct { Id = 101, Name = "Grapes", UnitCost = 50, Discount = 25, ExpiryInDays = 2 };
             Console.WriteLine(grapes.FinalCost());
 
@@ -112,7 +126,7 @@ namespace OOPDemo
 
             var order = new Order();
             Console.WriteLine($"Order Value = {order.CalculateTotal()}");
-
+            */
             /*
             ArrayList list = new ArrayList();
             list.Add(100);
@@ -122,6 +136,23 @@ namespace OOPDemo
             {
                 Console.WriteLine(item);
             }*/
+
+            var pen = new StaionaryProduct { Id = 100, Name = "Pen", UnitCost = 10, Discount = 0 };
+            var pencil = new StaionaryProduct { Id = 101, Name = "Pencil", UnitCost = 5, Discount = 5 };
+            var marker = new StaionaryProduct { Id = 102, Name = "Marker", UnitCost = 50, Discount = 10 };
+            var grapes = new PerishableProduct { Id = 103, Name = "Grapes", UnitCost = 30, Discount = 5, ExpiryInDays = 4 };
+            var onions = new PerishableProduct { Id = 104, Name = "Onions", UnitCost = 20, Discount = 0, ExpiryInDays = 7 };
+            var garlic = new PerishableProduct { Id = 105, Name = "Garlic", UnitCost = 40, Discount = 0, ExpiryInDays = 7 };
+
+            var order = new Order();
+            order.ProductItems.AddProductItem(new ProductItem { Product = pen, Units = 5 });
+            order.ProductItems.AddProductItem(new ProductItem { Product = pencil, Units = 10 });
+            order.ProductItems.AddProductItem(new ProductItem { Product = grapes, Units = 10 });
+            order.ProductItems.AddProductItem(new ProductItem { Product = onions, Units = 15 });
+
+            Console.WriteLine(order.ProductItems);
+            Console.WriteLine(order.CalculateTotal());
+
         }
     }
 }

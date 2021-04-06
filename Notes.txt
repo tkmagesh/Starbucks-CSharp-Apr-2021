@@ -87,6 +87,9 @@ Classes
         Static Members
             accessible using the 'Class' reference
 
+    Constructor Methods
+
+
 Id, FN, LN
 
 Id,
@@ -111,3 +114,15 @@ Create a Calculator Class
     Subtract()
     Multiply()
     Divide()
+
+Object Oriented Programming
+    4 tenets
+        Encapsulation
+
+        Abstraction
+            Expose only necessary attributes & methods to the outside world
+
+        Inheritance
+            Group related types together
+        Polymorphism
+

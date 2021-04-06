@@ -2,14 +2,21 @@
 
 namespace OOPDemo
 {
-    class Product
-    {
+    abstract class Product {
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal UnitCost { get; set; }
         public decimal Discount { get; set; }
         public decimal FinalCost() => UnitCost * ((100 - Discount) / 100);
-       
+    }
+
+    class StaionaryProduct : Product
+    {
+         
+    }
+
+    class PerishableProduct : Product {        
+        public int ExpiryInDays {get; set;}
     }
 
     class ProductItem
@@ -25,24 +32,25 @@ namespace OOPDemo
         }
     }
 
+
     class Order
     {
         public ProductItem[] ProductItems = new ProductItem[] {
             new ProductItem
             {
-                Product = new Product {Id = 100, Name = "Pen", UnitCost = 10, Discount = 5}
+                Product = new StaionaryProduct {Id = 100, Name = "Pen", UnitCost = 10, Discount = 5}
                 , Units = 10
             },
             new ProductItem
             {
-                Product = new Product {Id = 101, Name = "Pencil", UnitCost = 5, Discount = 5}
+                Product = new StaionaryProduct {Id = 101, Name = "Pencil", UnitCost = 5, Discount = 5}
                 , Units = 10
             },
             new ProductItem
             {
-                Product = new Product {Id = 102, Name = "Marker", UnitCost = 50, Discount = 10}
+                Product = new PerishableProduct {Id = 102, Name = "Grapes", UnitCost = 20, Discount = 25, ExpiryInDays = 2}
                 , Units = 10
-            },
+            }
         };
         public decimal Discount;
 
@@ -68,8 +76,18 @@ namespace OOPDemo
             var productItem = new ProductItem { Product = product, Units = 10 };
             Console.WriteLine($"Product Value = {productItem.ProductValue()}");
             */
+            /*
             var order = new Order();
             Console.WriteLine($"Order Value = {order.CalculateTotal()}");
+            */
+
+            StaionaryProduct pen = new StaionaryProduct{ Id = 100, Name = "Pen", UnitCost = 10, Discount = 0 };
+            
+
+            PerishableProduct grapes = new PerishableProduct { Id = 101, Name = "Grapes", UnitCost = 50, Discount = 25, ExpiryInDays = 2 };
+
+            Product p = new Product();
+            
         }
     }
 }

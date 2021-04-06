@@ -7,15 +7,17 @@ namespace OOPDemo
         public string Name { get; set; }
         public decimal UnitCost { get; set; }
         public decimal Discount { get; set; }
-        public abstract decimal FinalCost();
+        public virtual decimal FinalCost() => UnitCost * ((100-Discount)/100);
     }
 
     class StaionaryProduct : Product
     {
-        public override decimal FinalCost()
-        {
-            return this.UnitCost * ((100 - this.Discount) / 100);
-        }
+        
+    }
+
+    class ElectronicProduct : Product
+    {
+        
     }
 
     class PerishableProduct : Product {        

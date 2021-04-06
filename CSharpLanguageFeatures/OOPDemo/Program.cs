@@ -91,14 +91,17 @@ namespace OOPDemo
             Console.WriteLine($"Order Value = {order.CalculateTotal()}");
             */
 
-            StaionaryProduct pen = new StaionaryProduct{ Id = 100, Name = "Pen", UnitCost = 10, Discount = 0 };
-            
+            //StaionaryProduct pen = new StaionaryProduct{ Id = 100, Name = "Pen", UnitCost = 10, Discount = 0 };
+            //Console.WriteLine(pen.FinalCost());
 
             PerishableProduct grapes = new PerishableProduct { Id = 101, Name = "Grapes", UnitCost = 50, Discount = 25, ExpiryInDays = 2 };
-
-            Console.WriteLine(pen.FinalCost());
-
             Console.WriteLine(grapes.FinalCost());
+
+            Product p = grapes;
+            Console.WriteLine(p.FinalCost());
+
+            var order = new Order();
+            Console.WriteLine($"Order Value = {order.CalculateTotal()}");
         }
     }
 }

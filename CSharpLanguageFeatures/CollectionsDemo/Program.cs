@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace CollectionsDemo
 {
-    class Product
+    public class Product
     {
         public int Id;
         public string Name;
@@ -119,8 +119,40 @@ namespace CollectionsDemo
             }
         }
 
+        public Products Filter(IProductSpecification specification)
+        {
+            var result = new Products();
+            foreach(var item in list)
+            {
+                var product = (Product)item;
+                if (specification.SatisfiedBy(product))
+                {
+                    result.Add(product);
+                }
+            }
+            return result;
+        }
+
     }
 
+    interface IProductSpecification
+    {
+        bool SatisfiedBy (Product product);
+    }
+
+    public class ProductSpecificationByCategory : IProductSpecification
+    {
+        private string category;
+
+        public ProductSpecificationByCategory(string category)
+        {
+            this.category = category;
+        }
+        public bool SatisfiedBy(Product product)
+        {
+            return product.Category == category;
+        }
+    }
     interface IProductComparer
     {
         int Compare(Product leftProduct, Product rightProduct);
@@ -210,6 +242,11 @@ namespace CollectionsDemo
             var productsComparerByUnitCost = new ProductsComparerByUnitCost();
             products.Sort(productsComparerByUnitCost);
             Print(products);
+
+            Console.WriteLine("Filter products by Category [Stationary]");
+            var stationaryProductsSpecification = new ProductSpecificationByCategory("Stationary");
+            var stationaryProducts = products.Filter(stationaryProductsSpecification);
+            Print(stationaryProducts);
 
         }
 

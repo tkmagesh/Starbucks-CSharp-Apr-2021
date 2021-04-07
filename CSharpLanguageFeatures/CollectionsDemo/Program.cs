@@ -101,7 +101,7 @@ namespace CollectionsDemo
             }
         }
 
-        public void Sort(string attrName)
+        public void Sort(ProductsComparer comparer, string attrName)
         {
             for (var i = 0; i < Count - 1; i++)
             {
@@ -109,25 +109,7 @@ namespace CollectionsDemo
                 {
                     var leftProduct = (Product)list[i];
                     var rightProduct = (Product)list[j];
-                    var swap = false;
-                    switch (attrName)
-                    {
-                        case "Id":
-                            swap = leftProduct.Id > rightProduct.Id;
-                            break;
-                        case "Units":
-                            swap = leftProduct.Units > rightProduct.Units;
-                            break;
-                        case "UnitCost":
-                            swap = leftProduct.UnitCost > rightProduct.UnitCost;
-                            break;
-                        case "Name":
-                            swap = leftProduct.Name.CompareTo(rightProduct.Name) > 0;
-                            break;
-                        case "Category":
-                            swap = leftProduct.Category.CompareTo(rightProduct.Category) > 0;
-                            break;
-                    }
+                    var swap = comparer.Compare(leftProduct, rightProduct, attrName);
                     if (swap)
                     {
                         var temp = leftProduct;
@@ -138,6 +120,32 @@ namespace CollectionsDemo
             }
         }
 
+    }
+
+    class ProductsComparer
+    {
+        public bool Compare(Product leftProduct, Product rightProduct, string attrName)
+        {
+            switch (attrName)
+            {
+                case "Id":
+                    return leftProduct.Id > rightProduct.Id;
+                    
+                case "Units":
+                    return leftProduct.Units > rightProduct.Units;
+                    
+                case "UnitCost":
+                    return leftProduct.UnitCost > rightProduct.UnitCost;
+                    
+                case "Name":
+                    return leftProduct.Name.CompareTo(rightProduct.Name) > 0;
+                    
+                case "Category":
+                    return leftProduct.Category.CompareTo(rightProduct.Category) > 0;
+                default:
+                    return false;
+            }
+        }
     }
     class Program
     {
@@ -158,12 +166,13 @@ namespace CollectionsDemo
             products.SortById();
             Print(products);
 
+            var productsComparer = new ProductsComparer();
             Console.WriteLine("Sorting Products By Units");
-            products.Sort("Units");
+            products.Sort(productsComparer, "Units");
             Print(products);
 
             Console.WriteLine("Sorting Products By UnitCost");
-            products.Sort("UnitCost");
+            products.Sort(productsComparer, "UnitCost");
             Print(products);
 
         }

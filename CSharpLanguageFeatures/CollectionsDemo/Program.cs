@@ -215,6 +215,9 @@ namespace CollectionsDemo
     */
     class Program
     {
+        public delegate int OperationDelegate(int x, int y);
+
+        
         static void Main(string[] args)
         {
             var products = new Products();
@@ -248,6 +251,27 @@ namespace CollectionsDemo
             var stationaryProducts = products.Filter(stationaryProductsSpecification);
             Print(stationaryProducts);
 
+            //var result = 0;
+            Console.WriteLine(PerformOperation(10, 20, Program.Add));
+            Console.WriteLine(PerformOperation(10, 20, delegate (int x, int y){
+                return x - y;
+	        }));
+            Console.WriteLine(PerformOperation(10, 20, (x,y) => {
+                return x * y;
+            }));
+            Console.WriteLine(PerformOperation(10, 20, (x, y) => x / y));
+
+
+        }
+
+        public static int PerformOperation(int x, int y, OperationDelegate operation)
+        {
+            return operation(x, y);
+        }
+
+        public static int Add(int x, int y)
+        {
+            return x + y;
         }
 
         public static void Print(Products products)

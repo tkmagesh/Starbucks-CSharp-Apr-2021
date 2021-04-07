@@ -283,10 +283,13 @@ namespace CollectionsDemo
             Print(products);
 
             Console.WriteLine("Sorting Products By Name");
+            /*
             ProductComparerDelegate compareProductsByName = (leftProduct, rightProduct) =>
             {
                 return leftProduct.Name.CompareTo(rightProduct.Name);
             };
+            */
+            ProductComparerDelegate compareProductsByName = (leftProduct, rightProduct) => leftProduct.Name.CompareTo(rightProduct.Name);
             products.Sort(compareProductsByName);
             Print(products);
 

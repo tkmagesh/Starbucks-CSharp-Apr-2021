@@ -252,13 +252,20 @@ namespace CollectionsDemo
             Print(stationaryProducts);
 
             //var result = 0;
+            //passing method implementation explicitly
             Console.WriteLine(PerformOperation(10, 20, Program.Add));
+
+            //Inlining the function implementation
             Console.WriteLine(PerformOperation(10, 20, delegate (int x, int y){
                 return x - y;
 	        }));
+
+            //Using lambda expression
             Console.WriteLine(PerformOperation(10, 20, (x,y) => {
                 return x * y;
             }));
+
+            //Using lambda expression (simpler implementation)
             Console.WriteLine(PerformOperation(10, 20, (x, y) => x / y));
 
 

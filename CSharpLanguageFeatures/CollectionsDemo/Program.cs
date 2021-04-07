@@ -117,6 +117,17 @@ namespace CollectionsDemo
             customers.Sort(new CustomerComparerByFirstName());
             customers.Print();
 
+            Console.WriteLine("Filtering customers with Id > 302 [using delegates");
+            var customersWithIdAbove302 = customers.Filter(c => c.Id > 302);
+            customersWithIdAbove302.Print();
+
+            Console.WriteLine("Filtering customers with Id > 302 [using specification");
+            var customersWithIdAbove302Enumerable = customers.Filter(new CustomerSpecificationWithIdAbove302());
+            foreach(var customer in customersWithIdAbove302Enumerable)
+            {
+                Console.WriteLine(customer);
+            }
+
         }
 
         public static int PerformOperation(int x, int y, OperationDelegate operation)
@@ -166,6 +177,14 @@ namespace CollectionsDemo
         public int Compare(Customer leftItem, Customer rightItem)
         {
             return leftItem.FirstName.CompareTo(rightItem.FirstName);
+        }
+    }
+
+    public class CustomerSpecificationWithIdAbove302 : IItemSpecification<Customer>
+    {
+        public bool SatisfiedBy(Customer item)
+        {
+            return item.Id > 302;
         }
     }
 }

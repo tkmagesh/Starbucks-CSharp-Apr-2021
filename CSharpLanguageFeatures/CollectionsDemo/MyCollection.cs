@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace CollectionsDemo
 {
@@ -129,18 +130,17 @@ namespace CollectionsDemo
             }
         }
 
-        public MyCollection<T> Filter(IItemSpecification<T> specification)
+        public IEnumerable<T> Filter(IItemSpecification<T> specification)
         {
-            var result = new MyCollection<T>();
             foreach (var item in list)
             {
                 var tItem = (T)item;
                 if (specification.SatisfiedBy(tItem))
                 {
-                    result.Add(tItem);
+                    yield return tItem;
                 }
             }
-            return result;
+            
         }
 
         public MyCollection<T> Filter(ItemPredicate<T> itemPredicate)

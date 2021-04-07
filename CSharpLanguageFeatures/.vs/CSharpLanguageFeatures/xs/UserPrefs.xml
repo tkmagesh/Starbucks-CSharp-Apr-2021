@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{52F8A5B1-1BB4-4945-9267-0BAD51E2A8CE}|Default">
   <MonoDevelop.Ide.ItemProperties.OOPDemo PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionsDemo/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionsDemo/MyCollection.cs">
     <Files>
-      <File FileName="OOPDemo/Shapes.cs" />
-      <File FileName="CollectionsDemo/Program.cs" Line="85" Column="41" />
+      <File FileName="CollectionsDemo/Program.cs" Line="8" Column="5" />
+      <File FileName="CollectionsDemo/Product.cs" Line="14" Column="26" />
+      <File FileName="CollectionsDemo/Products.cs" Line="214" Column="6" />
+      <File FileName="CollectionsDemo/Customer.cs" Line="10" Column="6" />
+      <File FileName="CollectionsDemo/MyCollection.cs" Line="150" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSharpLanguageFeatures" expanded="True">
-            <Node name="CollectionsDemo" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
+            <Node name="CollectionsDemo" expanded="True" />
             <Node name="CSharpLanguageFeatures" expanded="True" />
             <Node name="OOPDemo" expanded="True" />
             <Node name="UserDefinedTypes" expanded="True" />
@@ -20,7 +21,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.CollectionsDemo FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.CollectionsDemo PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.UserDefinedTypes PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.CSharpLanguageFeatures PreferredExecutionTarget="MonoDevelop.Default" />

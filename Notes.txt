@@ -134,4 +134,5 @@ Assignment
         Get a product by Id
         Remove a product
         Iterate through the collecting using foreach
+Sort the products
 

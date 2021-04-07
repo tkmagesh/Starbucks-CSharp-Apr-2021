@@ -133,12 +133,28 @@ namespace CollectionsDemo
             return result;
         }
 
+        public Products Filter(ProductPredicate productPredicate)
+        {
+            var result = new Products();
+            foreach (var item in list)
+            {
+                var product = (Product)item;
+                if (productPredicate(product))
+                {
+                    result.Add(product);
+                }
+            }
+            return result;
+        }
+
     }
 
-    interface IProductSpecification
+    public interface IProductSpecification
     {
         bool SatisfiedBy (Product product);
     }
+
+    public delegate bool ProductPredicate(Product product);
 
     public class ProductSpecificationByCategory : IProductSpecification
     {
@@ -268,6 +284,29 @@ namespace CollectionsDemo
             //Using lambda expression (simpler implementation)
             Console.WriteLine(PerformOperation(10, 20, (x, y) => x / y));
 
+            /*
+            var calculator = new Calculator();
+            Console.WriteLine(PerformOperation(100, 200, calculator.Add));
+            Console.WriteLine(PerformOperation(100, 200, calculator.Subtract));
+            Console.WriteLine(PerformOperation(100, 200, calculator.Multiply));
+            Console.WriteLine(PerformOperation(100, 200, calculator.Divide));
+            */
+
+            /*
+            var nonStationaryProducts = products.Filter(delegate (Product product)
+            {
+                return product.Category != "Stationary";
+            });
+            */
+
+            var nonStationaryProducts = products.Filter(product => 
+            {
+                return product.Category != "Stationary";
+            });
+
+            Console.WriteLine("Non Stationary products");
+            Print(nonStationaryProducts);
+
 
         }
 
@@ -287,6 +326,29 @@ namespace CollectionsDemo
             {
                 Console.WriteLine(product);
             }
+        }
+    }
+
+    public class Calculator
+    {
+        public int Add(int x, int y)
+        {
+            return x + y;
+        }
+
+        public int Subtract(int x, int y)
+        {
+            return x - y;
+        }
+
+        public int Multiply(int x, int y)
+        {
+            return x * y;
+        }
+
+        public int Divide(int x, int y)
+        {
+            return x / y;
         }
     }
 }

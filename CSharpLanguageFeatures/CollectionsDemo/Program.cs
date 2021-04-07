@@ -119,6 +119,24 @@ namespace CollectionsDemo
             }
         }
 
+        public void Sort(ProductComparerDelegate comparerDelegate)
+        {
+            for (var i = 0; i < Count - 1; i++)
+            {
+                for (var j = i + 1; j < Count; j++)
+                {
+                    var leftProduct = (Product)list[i];
+                    var rightProduct = (Product)list[j];
+                    if (comparerDelegate(leftProduct, rightProduct) > 0)
+                    {
+                        var temp = leftProduct;
+                        list[i] = list[j];
+                        list[j] = temp;
+                    }
+                }
+            }
+        }
+
         public Products Filter(IProductSpecification specification)
         {
             var result = new Products();
@@ -173,6 +191,8 @@ namespace CollectionsDemo
     {
         int Compare(Product leftProduct, Product rightProduct);
     }
+
+    public delegate int ProductComparerDelegate(Product leftProduct, Product rightProduct);
 
     class ProductsComparerById : IProductComparer
     {
@@ -262,6 +282,14 @@ namespace CollectionsDemo
             products.Sort(productsComparerByUnitCost);
             Print(products);
 
+            Console.WriteLine("Sorting Products By Name");
+            ProductComparerDelegate compareProductsByName = (leftProduct, rightProduct) =>
+            {
+                return leftProduct.Name.CompareTo(rightProduct.Name);
+            };
+            products.Sort(compareProductsByName);
+            Print(products);
+
             Console.WriteLine("Filter products by Category [Stationary]");
             var stationaryProductsSpecification = new ProductSpecificationByCategory("Stationary");
             var stationaryProducts = products.Filter(stationaryProductsSpecification);
@@ -299,10 +327,13 @@ namespace CollectionsDemo
             });
             */
 
+            /*
             var nonStationaryProducts = products.Filter(product => 
             {
                 return product.Category != "Stationary";
             });
+            */
+            var nonStationaryProducts = products.Filter(p => p.Category != "Stationary");
 
             Console.WriteLine("Non Stationary products");
             Print(nonStationaryProducts);

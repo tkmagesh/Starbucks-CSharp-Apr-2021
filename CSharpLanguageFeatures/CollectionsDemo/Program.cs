@@ -101,7 +101,7 @@ namespace CollectionsDemo
             }
         }
 
-        public void Sort(ProductsComparer comparer, string attrName)
+        public void Sort(IProductComparer comparer)
         {
             for (var i = 0; i < Count - 1; i++)
             {
@@ -109,8 +109,7 @@ namespace CollectionsDemo
                 {
                     var leftProduct = (Product)list[i];
                     var rightProduct = (Product)list[j];
-                    var swap = comparer.Compare(leftProduct, rightProduct, attrName);
-                    if (swap)
+                    if (comparer.Compare(leftProduct, rightProduct) > 0)
                     {
                         var temp = leftProduct;
                         list[i] = list[j];
@@ -122,6 +121,40 @@ namespace CollectionsDemo
 
     }
 
+    interface IProductComparer
+    {
+        int Compare(Product leftProduct, Product rightProduct);
+    }
+
+    class ProductsComparerById : IProductComparer
+    {
+        public int Compare(Product leftProduct, Product rightProduct)
+        {
+            if (leftProduct.Id > rightProduct.Id) return 1;
+            if (leftProduct.Id < rightProduct.Id) return -1;
+            return 0;
+        }
+    }
+
+    class ProductsComparerByUnits : IProductComparer
+    {
+        public int Compare(Product leftProduct, Product rightProduct)
+        {
+            if (leftProduct.Units > rightProduct.Units) return 1;
+            if (leftProduct.Units < rightProduct.Units) return -1;
+            return 0;
+        }
+    }
+    class ProductsComparerByUnitCost : IProductComparer
+    {
+        public int Compare(Product leftProduct, Product rightProduct)
+        {
+            if (leftProduct.UnitCost > rightProduct.UnitCost) return 1;
+            if (leftProduct.UnitCost < rightProduct.UnitCost) return -1;
+            return 0;
+        }
+    }
+    /*
     class ProductsComparer
     {
         public bool Compare(Product leftProduct, Product rightProduct, string attrName)
@@ -147,6 +180,7 @@ namespace CollectionsDemo
             }
         }
     }
+    */
     class Program
     {
         static void Main(string[] args)
@@ -166,13 +200,15 @@ namespace CollectionsDemo
             products.SortById();
             Print(products);
 
-            var productsComparer = new ProductsComparer();
+            
             Console.WriteLine("Sorting Products By Units");
-            products.Sort(productsComparer, "Units");
+            var productsComparerByUnits = new ProductsComparerByUnits();
+            products.Sort(productsComparerByUnits);
             Print(products);
 
             Console.WriteLine("Sorting Products By UnitCost");
-            products.Sort(productsComparer, "UnitCost");
+            var productsComparerByUnitCost = new ProductsComparerByUnitCost();
+            products.Sort(productsComparerByUnitCost);
             Print(products);
 
         }

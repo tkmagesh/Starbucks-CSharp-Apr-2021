@@ -39,10 +39,10 @@ namespace CollectionsDemo
                     yield return tItem;
                 }
             }
-
+            
         }
 
-        public IEnumerable<T> Filter(ItemPredicate<T> itemPredicate)
+        public static IEnumerable<T> Filter<T>(this IEnumerable<T> list, Func<T,bool> itemPredicate)
         {
 
             foreach (var item in list)
@@ -54,8 +54,8 @@ namespace CollectionsDemo
                 }
             }
         }
-
-        public T First(ItemPredicate<T> itemPredicate)
+        
+        public static T First<T>(this IEnumerable<T> list, Func<T, bool> itemPredicate)
         {
             foreach (var item in list)
             {
@@ -68,7 +68,7 @@ namespace CollectionsDemo
             return default(T);
         }
 
-        public int Max(KeySelector<T> keySelector)
+        public static int Max<T>(this IEnumerable<T> list, Func<T, int> keySelector)
         {
             var result = 0;
             foreach (var item in list)
@@ -79,6 +79,8 @@ namespace CollectionsDemo
             }
             return result;
         }
+
+        public static 
 
     }
 }

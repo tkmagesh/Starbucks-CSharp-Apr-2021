@@ -50,7 +50,7 @@ namespace CSharp8Features
                 new Category{ Id = 3, Name = "Utencil"}
             };
 
-            var productsWithCategory = products.MyJoin(categories, p => p.CategoryId, c => c.Id, (p, c) => ( Id : p.Id, Name : p.Name, Category : c.Name ));
+            var productsWithCategory = products.Join(categories, p => p.CategoryId, c => c.Id, (p, c) => ( Id : p.Id, Name : p.Name, Category : c.Name ));
             Print(productsWithCategory);
         }
 
@@ -79,9 +79,9 @@ public static class MyUtils
         foreach(var outerObj in outerList)
             foreach(var innerObj in innerList)
             {
-                var outerKey = outerKeySelector(outerObj);
-                var innerKey = innerKeySelector(innerObj);
-                if (outerKey.Equals(innerKey))
+                TKey outerKeyValue = outerKeySelector(outerObj);
+                TKey innerKeyValue = innerKeySelector(innerObj);
+                if (outerKeyValue.Equals(innerKeyValue))
                 {
                     yield return mergeObject(outerObj, innerObj);
                 }

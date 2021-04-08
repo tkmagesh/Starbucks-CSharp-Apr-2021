@@ -140,6 +140,14 @@ namespace CollectionsDemo
             var maxId = customers.Max(customer => customer.Id);
             Console.WriteLine($"Max Id of customers collection : {maxId}\n");
 
+            var customerNames = customers.Select(c => c.FirstName + ' ' + c.LastName);
+            /*
+            foreach (var cn in customerNames)
+                Console.WriteLine(cn);
+            */
+            //customerNames.ForEach(cn => Console.WriteLine(cn));
+            customerNames.ForEach(Console.WriteLine);
+
         }
 
         public static int PerformOperation(int x, int y, OperationDelegate operation)

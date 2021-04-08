@@ -80,7 +80,17 @@ namespace CollectionsDemo
             return result;
         }
 
-        public static 
+        public static IEnumerable<TResult> Select<T,TResult>(this IEnumerable<T> list, Func<T, TResult> func)
+        {
+            foreach (T item in list)
+                yield return func(item);
+        }
+
+        public static void ForEach<T>(this IEnumerable<T> list, Action<T> action)
+        {
+            foreach (T item in list)
+                action(item);
+        }
 
     }
 }

@@ -1,21 +1,17 @@
 ﻿<Properties StartupConfiguration="{52F8A5B1-1BB4-4945-9267-0BAD51E2A8CE}|Default">
   <MonoDevelop.Ide.ItemProperties.OOPDemo PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionsDemo/IFormattable.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="CollectionsDemo/MyCollection.cs" Line="157" Column="1" />
-      <File FileName="CollectionsDemo/Program.cs" Line="139" Column="13" />
-      <File FileName="CollectionsDemo/Customer.cs" Line="3" Column="2" />
-      <File FileName="CollectionsDemo/Product.cs" Line="14" Column="61" />
-      <File FileName="CollectionsDemo/MyUtils.cs" Line="18" Column="39" />
-      <File FileName="CollectionsDemo/Products.cs" Line="13" Column="14" />
-      <File FileName="CollectionsDemo/IFormattable.cs" Line="1" Column="1" />
+      <File FileName="CollectionsDemo/MyCollection.cs" Line="13" Column="10" />
+      <File FileName="CollectionsDemo/MyUtils.cs" Line="42" Column="28" />
+      <File FileName="CollectionsDemo/Program.cs" Line="155" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSharpLanguageFeatures" expanded="True">
             <Node name="CollectionsDemo" expanded="True">
-              <Node name="IFormattable.cs" selected="True" />
+              <Node name="MyUtils.cs" selected="True" />
             </Node>
             <Node name="CSharpLanguageFeatures" expanded="True" />
             <Node name="OOPDemo" expanded="True" />

@@ -119,7 +119,7 @@ namespace CollectionsDemo
 
             Console.WriteLine("Filtering customers with Id > 302 [using delegates");
             var customersWithIdAbove302 = customers.Filter(c => c.Id > 302);
-            customersWithIdAbove302.Print();
+            //customersWithIdAbove302.Print();
 
             Console.WriteLine("Filtering customers with Id > 302 [using specification");
             var customersWithIdAbove302Enumerable = customers.Filter(new CustomerSpecificationWithIdAbove302());
@@ -135,6 +135,10 @@ namespace CollectionsDemo
             var p = new Product { Id = 5, Name = "Pen", UnitCost = 10, Units = 50, Category = "Stationary" };
             //Console.WriteLine(MyUtils.FormatForConsole(p));
             Console.WriteLine(p.FormatForConsole());
+
+            
+            var maxId = customers.Max(customer => customer.Id);
+            Console.WriteLine($"Max Id of customers collection : {maxId}\n");
 
         }
 

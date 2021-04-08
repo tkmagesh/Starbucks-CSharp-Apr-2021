@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 namespace CollectionsDemo
 {
@@ -19,13 +20,62 @@ namespace CollectionsDemo
             var objType = o.GetType();
             var result = $"[{objType.Name}] - ";
             var allProps = objType.GetProperties();
-            //allProps.Aggregate((res, prop) => result += $"{prop.Name}={prop.GetValue(o)}\t", result)
-
             foreach(var propInfo in allProps)
             {
                 var propName = propInfo.Name;
                 var propValue = propInfo.GetValue(o);
                 result += $"{propName}={propValue}\t";
+            }
+            return result;
+        }
+
+        public static IEnumerable<T> Filter<T>(this IEnumerable<T> list, IItemSpecification<T> specification)
+        {
+            foreach (var item in list)
+            {
+                var tItem = (T)item;
+                if (specification.SatisfiedBy(tItem))
+                {
+                    yield return tItem;
+                }
+            }
+
+        }
+
+        public IEnumerable<T> Filter(ItemPredicate<T> itemPredicate)
+        {
+
+            foreach (var item in list)
+            {
+                var tItem = (T)item;
+                if (itemPredicate(tItem))
+                {
+                    yield return tItem;
+                }
+            }
+        }
+
+        public T First(ItemPredicate<T> itemPredicate)
+        {
+            foreach (var item in list)
+            {
+                var tItem = (T)item;
+                if (itemPredicate(tItem))
+                {
+                    return tItem;
+                }
+            }
+            return default(T);
+        }
+
+        public int Max(KeySelector<T> keySelector)
+        {
+            var result = 0;
+            foreach (var item in list)
+            {
+                var tItem = (T)item;
+                var value = keySelector(tItem);
+                result = value > result ? value : result;
             }
             return result;
         }

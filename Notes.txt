@@ -136,3 +136,9 @@ Assignment
         Iterate through the collecting using foreach
 Sort the products
 
+
+
+
+System.LINQ
+    Enumerable
+        Class where all the collection utils are implemented as extension methods for IEnumberable<T>

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace CollectionsDemo
 {
 
-    public class MyCollection<T> : IEnumerable, IEnumerator
+    public class MyCollection<T> : IEnumerable, IEnumerator, IEnumerable<T>, IEnumerator<T>
     {
         ArrayList list = new ArrayList();
         private int index = -1;
@@ -18,6 +18,8 @@ namespace CollectionsDemo
         }
 
         public object Current => list[index];
+
+        T IEnumerator<T>.Current => (T)list[index];
 
         public void Add(T item)
         {
@@ -130,32 +132,7 @@ namespace CollectionsDemo
             }
         }
 
-        public IEnumerable<T> Filter(IItemSpecification<T> specification)
-        {
-            foreach (var item in list)
-            {
-                var tItem = (T)item;
-                if (specification.SatisfiedBy(tItem))
-                {
-                    yield return tItem;
-                }
-            }
-            
-        }
-
-        public MyCollection<T> Filter(ItemPredicate<T> itemPredicate)
-        {
-            var result = new MyCollection<T>();
-            foreach (var item in list)
-            {
-                var tItem = (T)item;
-                if (itemPredicate(tItem))
-                {
-                    result.Add(tItem);
-                }
-            }
-            return result;
-        }
+       
 
         public void Print()
         {
@@ -165,8 +142,15 @@ namespace CollectionsDemo
             }
         }
 
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            return this;
+        }
 
-
+        public void Dispose()
+        {
+            
+        }
     }
 
     public interface IItemSpecification<T>
@@ -174,7 +158,14 @@ namespace CollectionsDemo
         bool SatisfiedBy(T item);
     }
 
+    //the following can be replaced with the Func delegate
+    /*
+    public delegate int KeySelector<T>(T item);
     public delegate bool ItemPredicate<T>(T item);
+    public delegate decimal DecDelegate<T>(T Item);
+    public delegate long LongDelegate<T>(T Item);
+    */
+   
 
     /*
     public class ProductSpecificationByCategory : ISpecification<Product>

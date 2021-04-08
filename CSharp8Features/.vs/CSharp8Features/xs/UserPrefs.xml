@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{D979156B-52A4-4950-A195-A1B57E598760}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSharp8Features/PatternMatching.cs">
+    <Files>
+      <File FileName="CSharp8Features/Program.cs" Line="58" Column="10" />
+      <File FileName="CSharp8Features/PatternMatching.cs" Line="3" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CSharp8Features" expanded="True">
+            <Node name="CSharp8Features" expanded="True">
+              <Node name="PatternMatching.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CSharp8Features PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

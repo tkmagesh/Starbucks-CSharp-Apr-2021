@@ -142,3 +142,17 @@ Sort the products
 System.LINQ
     Enumerable
         Class where all the collection utils are implemented as extension methods for IEnumberable<T>
+
+    Functions that has return value can be represented using 'Func' delegate (and its variations)
+    Functions that do not return any value can be represented using 'Action' delegate (and its variations)
+
+1. Agile Principles Patterns and Practices (Robert.C.Martin)
+2. Refactoring (Martin Fowler)
+3. Refactoring to Patterns (Joshua)
+4. Growing Object Oriented Software Guided By Tests (Freeman & Pryce)
+5. Domain Driven Design
+6. Book on Applied Domain Driven Design
+
+tkmagesh77@gmail.com
++91-99019-11221
+

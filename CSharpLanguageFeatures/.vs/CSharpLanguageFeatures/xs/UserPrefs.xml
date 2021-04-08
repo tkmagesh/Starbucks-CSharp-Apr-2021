@@ -1,22 +1,10 @@
 ﻿<Properties StartupConfiguration="{52F8A5B1-1BB4-4945-9267-0BAD51E2A8CE}|Default">
   <MonoDevelop.Ide.ItemProperties.OOPDemo PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="CollectionsDemo/MyCollection.cs" Line="13" Column="10" />
-      <File FileName="CollectionsDemo/MyUtils.cs" Line="42" Column="28" />
-      <File FileName="CollectionsDemo/Program.cs" Line="155" Column="30" />
-    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CSharpLanguageFeatures" expanded="True">
-            <Node name="CollectionsDemo" expanded="True">
-              <Node name="MyUtils.cs" selected="True" />
-            </Node>
-            <Node name="CSharpLanguageFeatures" expanded="True" />
-            <Node name="OOPDemo" expanded="True" />
-            <Node name="UserDefinedTypes" expanded="True" />
-          </Node>
+          <Node name="CSharpLanguageFeatures" expanded="True" />
         </State>
       </Pad>
     </Pads>

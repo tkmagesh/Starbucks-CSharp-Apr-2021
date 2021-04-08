@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBDesign", "IBDesign\IBDesign.csproj", "{699DA7DC-0324-47F5-BFE9-8C31A2D8D060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBDesign.Tests", "IBDesign.Tests\IBDesign.Tests.csproj", "{201297C4-1B2D-4AF2-B028-13682C00C960}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{699DA7DC-0324-47F5-BFE9-8C31A2D8D060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{699DA7DC-0324-47F5-BFE9-8C31A2D8D060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{699DA7DC-0324-47F5-BFE9-8C31A2D8D060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{699DA7DC-0324-47F5-BFE9-8C31A2D8D060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{201297C4-1B2D-4AF2-B028-13682C00C960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201297C4-1B2D-4AF2-B028-13682C00C960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201297C4-1B2D-4AF2-B028-13682C00C960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201297C4-1B2D-4AF2-B028-13682C00C960}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCB2F8E7-1FB2-44EB-970C-AC0BDA4940DF}
+	EndGlobalSection
+EndGlobal

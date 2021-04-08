@@ -1,17 +1,21 @@
 ﻿<Properties StartupConfiguration="{52F8A5B1-1BB4-4945-9267-0BAD51E2A8CE}|Default">
   <MonoDevelop.Ide.ItemProperties.OOPDemo PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionsDemo/MyCollection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionsDemo/IFormattable.cs">
     <Files>
-      <File FileName="CollectionsDemo/MyCollection.cs" Line="141" Column="1" />
-      <File FileName="CollectionsDemo/Program.cs" Line="126" Column="1" />
-      <File FileName="CollectionsDemo/Customer.cs" Line="14" Column="1" />
+      <File FileName="CollectionsDemo/MyCollection.cs" Line="157" Column="1" />
+      <File FileName="CollectionsDemo/Program.cs" Line="139" Column="13" />
+      <File FileName="CollectionsDemo/Customer.cs" Line="3" Column="2" />
+      <File FileName="CollectionsDemo/Product.cs" Line="14" Column="61" />
+      <File FileName="CollectionsDemo/MyUtils.cs" Line="18" Column="39" />
+      <File FileName="CollectionsDemo/Products.cs" Line="13" Column="14" />
+      <File FileName="CollectionsDemo/IFormattable.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSharpLanguageFeatures" expanded="True">
             <Node name="CollectionsDemo" expanded="True">
-              <Node name="MyCollection.cs" selected="True" />
+              <Node name="IFormattable.cs" selected="True" />
             </Node>
             <Node name="CSharpLanguageFeatures" expanded="True" />
             <Node name="OOPDemo" expanded="True" />
@@ -27,12 +31,7 @@
   <MonoDevelop.Ide.ItemProperties.CSharpLanguageFeatures PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CollectionsDemo/MyCollection.cs" relfile="CollectionsDemo/MyCollection.cs" line="135" column="1" />
-      <Breakpoint file="/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CollectionsDemo/Program.cs" relfile="CollectionsDemo/Program.cs" line="125" column="1" />
-      <Breakpoint file="/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CollectionsDemo/Program.cs" relfile="CollectionsDemo/Program.cs" line="121" column="1" />
-      <Breakpoint file="/Users/tkmagesh77/Documents/Training/Starbucks-CSharp-Apr-2021/CSharpLanguageFeatures/CollectionsDemo/MyCollection.cs" relfile="CollectionsDemo/MyCollection.cs" line="157" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

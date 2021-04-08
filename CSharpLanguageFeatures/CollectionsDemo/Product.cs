@@ -1,13 +1,13 @@
 ﻿using System;
 namespace CollectionsDemo
 {
-    public class Product
+    public class Product : IFormattable
     {
-        public int Id;
-        public string Name;
-        public decimal UnitCost;
-        public int Units;
-        public string Category;
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal UnitCost { get; set; }
+        public int Units { get; set; }
+        public string Category { get; set; }
 
         public override string ToString()
         {

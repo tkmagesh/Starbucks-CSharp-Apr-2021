@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CollectionsDemo
 {
-    public class Customer
+    public class Customer : IFormattable
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

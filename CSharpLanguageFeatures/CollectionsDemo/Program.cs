@@ -128,6 +128,14 @@ namespace CollectionsDemo
                 Console.WriteLine(customer);
             }
 
+            var c = new Customer { Id = 500, FirstName = "Dummy", LastName = "Customer" };
+            //MyUtils.WhoAmI(c);
+            //Console.WriteLine(MyUtils.FormatForConsole(c));
+            Console.WriteLine(c.FormatForConsole());
+            var p = new Product { Id = 5, Name = "Pen", UnitCost = 10, Units = 50, Category = "Stationary" };
+            //Console.WriteLine(MyUtils.FormatForConsole(p));
+            Console.WriteLine(p.FormatForConsole());
+
         }
 
         public static int PerformOperation(int x, int y, OperationDelegate operation)

@@ -3,9 +3,15 @@ namespace IBDesign
 {
     public class Greeter
     {
-       public string Greet(string userName)
+        ITimeService timeService;
+
+        public Greeter(ITimeService timeService)
         {
-            if (DateTime.Now.Hour < 12)
+            this.timeService = timeService;
+        }
+        public string Greet(string userName)
+        {
+            if (timeService.GetCurrent().Hour < 12)
             {
                 return $"Hi {userName}, Good Morning!";
             } else {

@@ -1,20 +1,23 @@
 ﻿<Properties StartupConfiguration="{201297C4-1B2D-4AF2-B028-13682C00C960}|Default">
   <MonoDevelop.Ide.ItemProperties.IBDesign.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="IBDesign/Greeter.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="IBDesign/Program.cs" Line="5" Column="1" />
+      <File FileName="IBDesign/Program.cs" Line="10" Column="37" />
       <File FileName="IBDesign/Calculator.cs" Line="2" Column="19" />
-      <File FileName="IBDesign.Tests/UnitTest1.cs" Line="21" Column="21" />
-      <File FileName="IBDesign/Greeter.cs" Line="9" Column="6" />
+      <File FileName="IBDesign.Tests/UnitTest1.cs" Line="3" Column="1" />
+      <File FileName="IBDesign/Greeter.cs" Line="11" Column="10" />
+      <File FileName="IBDesign/TimeService.cs" Line="5" Column="6" />
+      <File FileName="IBDesign/ITimeService.cs" Line="6" Column="31" />
+      <File FileName="IBDesign.Tests/GreeterTests.cs" Line="28" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="IBDesign" expanded="True">
-            <Node name="IBDesign" expanded="True">
-              <Node name="Greeter.cs" selected="True" />
+            <Node name="IBDesign" expanded="True" />
+            <Node name="IBDesign.Tests" expanded="True">
+              <Node name="GreeterTests.cs" selected="True" />
             </Node>
-            <Node name="IBDesign.Tests" expanded="True" />
           </Node>
         </State>
       </Pad>

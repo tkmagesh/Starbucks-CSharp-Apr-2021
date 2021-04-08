@@ -7,7 +7,9 @@ namespace IBDesign
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var ts = new TimeService();
+            var greeter = new Greeter(ts);
+            Console.WriteLine(greeter.Greet("Magesh"));
         }
     }
 }
